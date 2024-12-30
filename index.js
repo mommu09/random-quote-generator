@@ -4,21 +4,29 @@ const options = { method: 'GET', headers: { accept: 'application/json' } };
 let btn = document.getElementById('generate');
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
+let loader = document.querySelector('.loader');
+loader.style.display = 'none';
 let quoteCont;
 let authorName;
 
 btn.addEventListener('click', (e) => {
+    quote.innerHTML = ''
+    author.innerHTML = ''
+    loader.style.display = 'block';
     e.preventDefault();
-    fetch(url, options)
+    setTimeout(()=>{
+        fetch(url, options)
         .then((res) => {
             return res.json()
         })
         .then((data) => {
+            loader.style.display = 'none'
             quoteCont = data.data.content;
             authorName = data.data.author;
             quote.innerHTML = `'${quoteCont}'`;
             author.innerHTML = `-${authorName}`
         })
+    },1000)
 })
 
 
