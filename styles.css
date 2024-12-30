@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-color: rgb(33, 33, 33);
+}
+
+.btn {
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #ffd277;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.btn::before {
+    position: absolute;
+    content: "Generate Quote";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+}
+
+.btn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.btn:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    font-size: larger;
+    letter-spacing: 0.2ch;
+    line-height: 2;
+    justify-content: center;
+}
+
+.quote-cont {
+    font-family: "Delius Swash Caps", serif;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#author{
+    text-align: end;
+}
+
+
+@media (max-width:768px){
+    .container{
+        width: 90%;
+    }
+}
