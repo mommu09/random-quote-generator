@@ -1,170 +1,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100dvh;
-    background-color: rgb(33, 33, 33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: rgb(33, 33, 33);
 }
 
 .btn {
-    width: 140px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
-    background-size: 250%;
-    background-position: left;
-    color: #ffd277;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition-duration: 1s;
-    overflow: hidden;
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  font-size: larger;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
 }
 
 .btn::before {
-    position: absolute;
-    content: "Generate Quote";
-    color: #ffd277;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 97%;
-    height: 90%;
-    border-radius: 8px;
-    transition-duration: 1s;
-    background-color: rgba(0, 0, 0, 0.842);
-    background-size: 200%;
+  content: "Generate Quote";
+  position: absolute;
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
 }
 
 .btn:hover {
-    background-position: right;
-    transition-duration: 1s;
+  background-position: right;
+  transition-duration: 1s;
 }
 
 .btn:hover::before {
-    background-position: right;
-    transition-duration: 1s;
+  background-position: right;
+  transition-duration: 1s;
 }
 
 .btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .container {
-    width: 80%;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    color: white;
-    align-items: center;
-    font-size: larger;
-    letter-spacing: 0.2ch;
-    line-height: 2;
-    justify-content: center;
+  width: 80%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  letter-spacing: 0.2ch;
+  line-height: 2;
+  justify-content: center;
 }
 
 .quote-cont {
-    font-family: "Delius Swash Caps", serif;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  font-family: "Delius Swash Caps", serif;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: x-large;
 }
-#author{
-    text-align: end;
+
+#author {
+  text-align: end;
+  font-size: x-large;
 }
 
 
-/* From Uiverse.io by JaydipPrajapati1910 */ 
 .loader {
-    height: 30px;
-    display: inline-block;
-  }
-  
-  .loader > div {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    box-shadow: 0 0 10px orange;
-    background: #FFECBA;
-    float: left;
-    margin: 5px;
-    transform: scale(2);
-  }
-  
-  .loader > div:nth-child(1) {
-    animation: anm-BL-53-move1 1s infinite linear;
-  }
-  
-  .loader > div:nth-child(2) {
-    animation: anm-BL-53-move2 1s infinite linear;
-    animation-delay: 0.2s;
-  }
-  
-  .loader > div:nth-child(3) {
-    animation: anm-BL-53-move3 1s infinite linear;
-    animation-delay: 0.3s;
-  }
-  
-  .loader > div:nth-child(4) {
-    animation: anm-BL-53-move4 1s infinite linear;
-    animation-delay: 0.4s;
-  }
-  
-  .loader > div:nth-child(5) {
-    animation: anm-BL-53-move5 1s infinite linear;
-    animation-delay: 0.5s;
-  }
-  
-  @keyframes anm-BL-53-move1 {
-    50% {
-      background: #FFBB00;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes anm-BL-53-move2 {
-    50% {
-      background: #FFBB00;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes anm-BL-53-move3 {
-    50% {
-      background: #FFBB00;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes anm-BL-53-move4 {
-    50% {
-      background: #FFBB00;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes anm-BL-53-move5 {
-    50% {
-      background: #FFBB00;
-      transform: scale(1);
-    }
-  }
-    
-  
+  height: 30px;
+  display: inline-block;
+}
 
-@media (max-width:768px){
-    .container{
-        width: 90%;
-    }
+.loader>div {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  box-shadow: 0 0 10px orange;
+  background: #FFECBA;
+  float: left;
+  margin: 5px;
+  transform: scale(2);
+}
+
+.loader>div:nth-child(1) {
+  animation: anm-BL-53-move1 1s infinite linear;
+}
+
+.loader>div:nth-child(2) {
+  animation: anm-BL-53-move2 1s infinite linear;
+  animation-delay: 0.2s;
+}
+
+.loader>div:nth-child(3) {
+  animation: anm-BL-53-move3 1s infinite linear;
+  animation-delay: 0.3s;
+}
+
+.loader>div:nth-child(4) {
+  animation: anm-BL-53-move4 1s infinite linear;
+  animation-delay: 0.4s;
+}
+
+.loader>div:nth-child(5) {
+  animation: anm-BL-53-move5 1s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes anm-BL-53-move1 {
+  50% {
+    background: #FFBB00;
+    transform: scale(1);
+  }
+}
+
+@keyframes anm-BL-53-move2 {
+  50% {
+    background: #FFBB00;
+    transform: scale(1);
+  }
+}
+
+@keyframes anm-BL-53-move3 {
+  50% {
+    background: #FFBB00;
+    transform: scale(1);
+  }
+}
+
+@keyframes anm-BL-53-move4 {
+  50% {
+    background: #FFBB00;
+    transform: scale(1);
+  }
+}
+
+@keyframes anm-BL-53-move5 {
+  50% {
+    background: #FFBB00;
+    transform: scale(1);
+  }
+}
+
+
+
+@media (max-width:768px) {
+  .container {
+    width: 90%;
+  }
 }
